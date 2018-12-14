@@ -1,7 +1,3 @@
-*.hi
-*.o
-*.prof
-*.aux
-*.hp
-*.ps
-*~
+day*/*
+!day*/*.hs
+!day*/*.txt
