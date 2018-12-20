@@ -1,0 +1,61 @@
+00 GOTO 17
+01 r5 = 1
+02 r4 = 1
+03 r2 = r5*r4
+04 r2 = r2==r1
+05 GOTO 6+r2
+06 GOTO 8
+07 r0 = r5+r0
+08 r4 = r4+1
+09 r2 = r4>r1
+10 GOTO 11+r2
+11 GOTO 3
+12 r5 = r5+1
+13 r2 = r5>r1
+14 GOTO 15+r2
+15 GOTO 2
+16 END
+17 r1 = 836
+21 r2 = 107
+24 r1 = 943
+25 GOTO 26+r0
+26 GOTO 1
+27 r2 = 10550400
+33 r1 = r1+r2
+34 r0 = 0
+35 GOTO 1
+
+--- OR
+
+r1 = 10551343
+r0 = 0
+
+r5 = 1
+
+do {
+  r4 = 1
+
+  do {
+    if (r5*r4 == r1) {
+      r0 += r5
+    }
+
+    r4 += 1
+
+    if (r4 > r1) {
+      break
+    }
+  }
+
+  r5 += 1
+  if (r5 > r1) {
+    break
+  }
+}
+
+--- OR
+
+p1:
+sum(factors(943))
+p2:
+sum(factors(10550400))
